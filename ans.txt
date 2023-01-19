@@ -1,0 +1,13 @@
+Question 1:
+    socket.socket(socket.AF_INET, socket.SOCK_STREAM), creates a TCP socket
+
+Question 2:
+    server socket socket binds to a host and port and listens for incoming requests while client socket connects to a host and port and sends data
+
+Question 3:
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+
+Question 4:
+Question 5:
+Question 6:
