@@ -30,7 +30,6 @@ def main():
 
                 # perform outgoing query
                 host = "www.google.com"
-                payload = f'GET / HTTP/1.0\r\nHost: {host}\r\n\r\n'
                 buffer_size = 4096
 
                 http_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM);
@@ -39,10 +38,9 @@ def main():
 
                 http_socket.connect((remote_ip, 80));
                 
-                http_socket.send(payload.encode())
+                http_socket.send(full_data)
                 # perform outgoing request end
 
-                print("LKSDFJKLDS")
                 #continue accepting data until no more left
                 response_data = b""
                 while True:
