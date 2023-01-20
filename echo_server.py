@@ -21,6 +21,7 @@ def main():
         #continuously listen for connections
         while True:
             conn, addr = s.accept()
+            print(conn)
             print("Connected by", addr)
             
             #recieve data, wait a bit, then send it back
@@ -28,7 +29,7 @@ def main():
             # print(full_data)
             time.sleep(0.5)
             conn.sendall(full_data)
-            print(conn.recv(5000))
+            print(conn.recv(BUFFER_SIZE))
             conn.close()
 
 if __name__ == "__main__":
